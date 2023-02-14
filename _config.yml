@@ -1,0 +1,18 @@
+title: ∫created
+description: I created and integrated it with ...
+author: Sergey Polyarus
+show_downloads: false
+google_analytics:
+theme: jekyll-theme-hacker
+
+paginate: 5
+paginate_path: "/blog/page:num/"
+plugins: [jekyll-paginate]
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:path/
+
+social:
+  github: icreated

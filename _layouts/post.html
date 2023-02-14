@@ -1,0 +1,32 @@
+---
+layout: default
+---
+
+<div class="post-meta">
+  <div>
+    <a href="javascript:history.back()" alt="Go back"><b>../</b></a>
+  </div>
+  <div class="post-time">
+    <i class="fa fa-calendar"></i>
+    <time>{{ page.date | date_to_string }}</time>
+  </div>
+</div>
+<div class="post-meta">
+  <div>
+    <i class="fa fa-user"></i> <small>by {{ page.author | default: site.author }}</small>
+  </div>
+  <div class="post-time">
+    {% if page.tags %}
+    <i class="fa fa-tags"></i> <small><em>{{ page.tags | join: "</em> - <em>" }}</em></small>
+    {% endif %}
+  </div>
+</div>
+
+<h1 class="subject">{{ page.title }}</h1>
+
+
+{{content}}
+
+
+
+
