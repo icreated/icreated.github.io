@@ -29,8 +29,8 @@
       {% for tag in tags %}
       {% if tag[1].size > 1 %}
         <li>
-          <a href="{% link tag/{{ tag[0] }}.md %}" title="{{ tag[1].size }}">
-            <span class="tag tag-{{ tag[0] }}">#{{tag[0] }}</a></span></a></li>
+          <a href="{{ site.url }}{% link tag/{{ tag[0] }}.md %}" title="{{ tag[1].size }}">
+            <span class="tag tag-{{ tag[0] }}">#{{ tag[0] }}</a></span></a></li>
       {% endif %}
       {% endfor %}
     </ul>

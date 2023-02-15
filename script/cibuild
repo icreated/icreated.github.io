@@ -5,5 +5,5 @@ set -e
 bundle exec jekyll build
 bundle exec htmlproofer ./_site --check-html
 bundle exec rubocop -D --config .rubocop.yml
-c
+
 gem build jekyll-theme-hacker.gemspec
