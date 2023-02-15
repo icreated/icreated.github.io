@@ -2,6 +2,7 @@
 
 set -e
 
+bundle update jekyll 
 bundle exec jekyll build
 bundle exec htmlproofer ./_site --check-html
 bundle exec rubocop -D --config .rubocop.yml
