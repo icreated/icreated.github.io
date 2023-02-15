@@ -13,6 +13,7 @@ layout: default
     <div class="post-time">
       <i class="fa fa-calendar"></i>
       <time>{{ post.date | date_to_string }}</time>
+      <div>by {{ post.author | default: site.author }}</div>
     </div>
     <div class="post-tag">
       <ul>

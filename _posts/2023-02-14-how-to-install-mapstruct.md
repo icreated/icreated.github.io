@@ -1,7 +1,7 @@
 ---
 author: "Sergey Polyarus"
 layout: post
-title:  "How to install mapstruct for use with eclipse"
+title:  "How to install MapStruct for use with eclipse"
 date:   2023-02-13 19:17:52
 comments: true
 description: Eclipse plugin for mapstruct
