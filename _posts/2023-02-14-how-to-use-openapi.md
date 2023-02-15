@@ -1,8 +1,8 @@
 ---
 author: "Sergey Polyarus"
 layout: post
-title:  "How to use OpenAPI first approach"
-date:   2023-02-13 20:17:52
+title: "How to use OpenAPI first approach"
+date: 2023-02-13 20:17:52
 comments: true
 description: Thinking in OpenAPI first approach when developing a new API
 categories: webportal openapi
@@ -43,7 +43,6 @@ For example, let's create an OpenAPI specification for a simple API that returns
 {% endhighlight yaml %}
 
 This specification describes an endpoint that returns credit card types. It returns an array of `ValueLabel` objects. `ValueLabel` object has two properties: `value` and `label`.
-
 
 
 ## Generate server stubs

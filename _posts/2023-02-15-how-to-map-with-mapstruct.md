@@ -2,7 +2,7 @@
 author: "Sergey Polyarus"
 layout: post
 title:  "How to map Idempiere models to DTO with MapStruct"
-date:   2023-02-14 19:28:52
+date: 2023-02-14 19:28:52
 comments: true
 description: MapStruct mapping between different types of objects. For example, it is used to convert between MProduct and ProductDTO objects.
 categories: mapstruct webportal idempiere
