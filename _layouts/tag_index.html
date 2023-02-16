@@ -1,7 +1,7 @@
 ---
 layout: page
 ---
-<div class="page-content wc-container">
+
   <div class="post">
       {% for post in site.posts %}
         {% for tag in post.tags %}
@@ -14,31 +14,28 @@ layout: page
             </a>
           </h3>
 
-<div class="post-meta">
-  <div class="post-time">
-    <i class="fa fa-calendar"></i>
-    <time>{{ post.date | date_to_string }}</time>
-  </div>
-  <div class="post-tag">
-    <ul>
-      {% for tag in post.tags %}
-      {% assign tagLink = '/tag/' | append: tag | append: '.html' %}
-      <li><a href="{{ tagLink | relative_url }}"><span class="tag tag-{{ tag }}">{{ tag }}</span></a></li>
-      {% endfor %}
-    </ul>
-  </div>
-
-</div>
-
-<div class="post-desc">
-  <p>
-    {{ post.description }}
-  </p>
-</div>
-
+    <div class="post-meta">
+      <div class="post-time">
+        <i class="fa fa-calendar"></i>
+        <time>{{ post.date | date_to_string }}</time>
+      </div>
+      <div class="post-tag">
+        <ul>
+          {% for tag in post.tags %}
+          {% assign tagLink = '/tag/' | append: tag | append: '.html' %}
+          <li><a href="{{ tagLink | relative_url }}"><span class="tag tag-{{ tag }}">{{ tag }}</span></a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+    <div class="post-desc">
+      <p>
+        {{ post.description }}
+      </p>
+    </div>
 
           {% endif %}
         {% endfor %}
       {% endfor %}
   </div>
-</div>
+
