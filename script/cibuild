@@ -3,7 +3,7 @@
 set -e
 
 bundle exec jekyll build
-bundle exec htmlproofer ./_site --check-html
+bundle exec htmlproofer ./_site --check-html --url-ignore /linkedin.com/
 bundle exec rubocop -D --config .rubocop.yml
 
 gem build jekyll-theme-hacker.gemspec

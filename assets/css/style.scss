@@ -18,6 +18,26 @@
     margin-left: 0.5em;
   }
 
+  .footer-distributed {
+    margin-top: 5em;
+  }
+  .footer {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .brand {
+    margin-left: 1em;
+    font-weight: bold;
+    color: var(--primary);
+  }
+  .social-links > li {
+    align-items: center;
+    display: inline-block;
+    margin-left: 1em;
+    list-style-type: none;
+    list-style-image: none;
+  }
+
 
   .page-content {
     display: flex;
