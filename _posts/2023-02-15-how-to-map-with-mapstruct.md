@@ -73,23 +73,24 @@ Mappings between these objects are defined in `co.icreated.portal.mapper.Invoice
 {% endhighlight %}
 
 
-MapStruct maps fields with the same name by default. So, you don't need to define mapping for fields with the same name.\
-If you want to map fields with different names you need to use **@Mapping** annotation:\
-**@Mapping** annotation is used to define mapping between two fields.\
-**@Mapping** annotation has two parameters: `target` and `source`.\
-`target` is a field in the target object. In our case it is `InvoiceDTO`.\ 
-`source` is a field in the source object. In our case it is `MInvoice`.\
+MapStruct maps fields with the same name by default. So, you don't need to define mapping for fields with the same name. \
+If you want to map fields with different names you need to use **@Mapping** annotation: \
+**@Mapping** annotation is used to define mapping between two fields. \
+**@Mapping** annotation has two parameters: `target` and `source`:
+ - `target` is a field in the target object. In our case it is `InvoiceDTO`. 
+ - `source` is a field in the source object. In our case it is `MInvoice`.
+
 For example: `@Mapping(target = "id", source = "c_Invoice_ID")` means that `id` field in `InvoiceDTO` will be mapped from `c_Invoice_ID` field in `MInvoice`.
 
-`expression` is used to define a custom mapping. In our case we use it to get `bpartnerName` from `C_BPartner_ID` field.\ 
-Java code is used to define custom mapping.\
+`expression` is used to define a custom mapping. In our case we use it to get `bpartnerName` from `C_BPartner_ID` field. \ 
+Java code is used to define custom mapping. \
 Don't forget to add `MBPartner` class to the list of imports in @Mapper annotation.
 
 
 ## Special cases
 For exemple we need to do additional actions when mapping `MInvoice` to `InvoiceDTO`.
 It can be done with **@AfterMapping** annotation. This annotation means that the method will be called after the mapping is done.
-In the parameters of the method we can use the source and target objects.\
+In the parameters of the method we can use the source and target objects. \
 Here `InvoiceDto` annotated with `@MappingTarget` is already populated with data from `MInvoice`. We can use it to get additional data.
 {% highlight java %}
     @AfterMapping
@@ -100,7 +101,7 @@ Here `InvoiceDto` annotated with `@MappingTarget` is already populated with data
     }
 {% endhighlight %}
 
-Thanks to all these features we can easily map Idempiere models to DTOs.\
+Thanks to all these features we can easily map Idempiere models to DTOs. \
 
 **Advice**: Escaping custom mapping is possible if you give the same name to the field in the source and target objects. Think about it when working with OpenApi definitions.
     
