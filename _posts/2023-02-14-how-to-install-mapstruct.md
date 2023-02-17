@@ -22,9 +22,9 @@ The eclipse plugin for MapStruct is not installed by default. You need to instal
 Visit [MapStruct Eclipse Plugin](https://mapstruct.org/documentation/ide-support/) page and download the latest version of the plugin.
 Here is parameters that you need to use with Eclipse:
 
-![alt text](/assets/images/mapstruct/eclipse-mapstruct.png "Eclipse MapStruct parameters")
+![Eclipse MapStruct parameters](/assets/images/mapstruct/eclipse-mapstruct.png "Eclipse MapStruct parameters")
 
-![alt text](/assets/images/mapstruct/eclipse-mapstruct-dependencies.png "Eclipse MapStruct dependencies")
+![Eclipse MapStruct dependencies](/assets/images/mapstruct/eclipse-mapstruct-dependencies.png "Eclipse MapStruct dependencies")
 
 With this configuration your mappings will be generated automatically when you build your project in the following folder: `target/generated-sources/annotations`
 

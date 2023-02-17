@@ -4,10 +4,23 @@ author: Sergey Polyarus
 show_downloads: false
 google_analytics: G-M5FFVQXXYY
 theme: jekyll-theme-hacker
+timezone: Europe/Paris
 
 paginate: 5
 paginate_path: "/blog/page:num/"
-plugins: [jekyll-paginate]
+plugins: [jekyll-paginate, jekyll-seo-tag, jekyll-sitemap]
+
+jekyll_compose:
+  post_default_front_matter:
+    last_modified_at: 
+    permalink: 
+    description:
+    image:
+    published: true
+    sitemap: true
+    excerpt_separator: <!--more-->
+    categories:
+    tags:
 
 collections:
   projects:
