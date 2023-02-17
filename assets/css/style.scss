@@ -15,6 +15,7 @@
   }
   .navbar ul > li > a {
     font-size: 1.4em;
+    color: var(--text-color);
     text-decoration: none;
   }
 
@@ -24,7 +25,7 @@
   }
 
   .footer-distributed {
-    margin-top: 5em;
+    margin-top: 3em;
   }
   .footer {
     display: flex;
@@ -34,6 +35,12 @@
     margin-left: 1em;
     font-weight: bold;
     color: var(--primary);
+  }
+  .social-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+    margin-bottom: 1em;
   }
   .social-links > li {
     align-items: center;

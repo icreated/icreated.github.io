@@ -6,7 +6,7 @@ google_analytics: G-M5FFVQXXYY
 theme: jekyll-theme-hacker
 timezone: Europe/Paris
 
-paginate: 5
+paginate: 4
 paginate_path: "/blog/page:num/"
 plugins: [jekyll-paginate, jekyll-seo-tag, jekyll-sitemap]
 
@@ -32,3 +32,4 @@ social:
   linkedin: sergey-polyarus-23537a4a
   stackoverflow: spok
   credly: sergey-polyarus
+  
