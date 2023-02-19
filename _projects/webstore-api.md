@@ -18,11 +18,11 @@ It's based on Jersey API Framework, Java-JWT for security purposes & Swagger int
 
 
 ## Features
-![WebStore Schema](/assets/images/projects/webstore/screenshot_schema.png?raw=true "Webstore Schema")
+![WebStore Schema](/assets/images/projects/webstore-api/screenshot_schema.png?raw=true "Webstore Schema")
 
 This API provides following services:
 
-![Swagger services](/assets/images/projects/webstore/screenshot_swagger.png?raw=true "Swagger services")
+![Swagger services](/assets/images/projects/webstore-api/screenshot_swagger.png?raw=true "Swagger services")
 
 It's quite enough to build a real frontend commercial site with.
 As an example you can check an [WebStore Angular project]({% link _projects/webstore.md %}) built on it: 
