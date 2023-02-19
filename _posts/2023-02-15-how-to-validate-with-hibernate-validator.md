@@ -4,7 +4,7 @@ layout: post
 title:  "How to validate with Hibernate Validator"
 date: 2023-02-14 19:28:52
 comments: true
-description: Hibernate Validator is used in WebPortal API to validate incoming requests from OpenApi specifications.
+description: It is used in WebPortal API to validate incoming requests from OpenApi spec.
 categories: mapstruct webportal idempiere
 tags: 
 - webportal-api
