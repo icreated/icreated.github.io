@@ -4,7 +4,8 @@ title: Icreated Blog History
 shortName: history
 ---
 
-<div class="container">
+<h1 class="subject">{{ page.title}}</h1>
+
   <div class="history">
     {% for post in site.posts %}
       {% capture currentyear %}{{post.date | date: "%Y"}}{% endcapture %}
@@ -18,4 +19,3 @@ shortName: history
     {% endfor %}
         <ul>
   </div>
-</div>

@@ -4,6 +4,8 @@ title: Icreated Blog
 shortName: blog
 ---
 
+<h1 class="subject">{{ page.title}}</h1>
+
 {% for post in paginator.posts %}
   <h2 class="post-title">
     <a href="{{site.url | append: post.url }}">

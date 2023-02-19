@@ -23,10 +23,11 @@
 
             <div class="navbar">
                 <ul>
-                    <li><a class="navbar-menu {% if page.shortName == 'blog'  %} highlight {% endif %}" href="{{ site.url }}/">/blog</a></li>
-                    <li><a class="navbar-menu {% if page.shortName == 'projects'  %} highlight {% endif %}" href="{{ site.url }}{% link projects.html %}">/projects</a></li>
-                    <li><a class="navbar-menu {% if page.shortName == 'history'  %} highlight {% endif %}" href="{{ site.url }}{% link history.html %}">/history</a></li>
-                    <li><a class="navbar-menu {% if page.shortName == 'about'  %} highlight {% endif %}" href="{{ site.url }}{% link about.md %}">/about</a></li>
+                    <li><a class="navbar-menu" href="{{ site.url }}/">/blog</a></li>
+                    <li><a class="navbar-menu" href="{{ site.url }}{% link projects.html %}">/projects</a></li>
+                    <li><a class="navbar-menu" href="{{ site.url }}{% link history.html %}">/history</a></li>
+                    <li><a class="navbar-menu" href="{{ site.url }}{% link about.md %}">/about</a></li>
+                    <!-- {% if page.shortName == 'about'  %} highlight {% endif %} -->
                 </ul>
             </div>
       </div>

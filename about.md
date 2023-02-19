@@ -4,6 +4,7 @@ title: About contributors
 shortName: about
 ---
 
+<h1 class="subject">{{ page.title}}</h1>
 
 If you like this blog and you find the information useful, you can support it by donating via PayPal. Thank you!
 

@@ -4,6 +4,8 @@ title: Icreated Projects
 shortName: projects
 ---
 
+<h1 class="subject">{{ page.title}}</h1>
+
 {% assign sorted_projects = site.projects | sort:"order" %}
 {% for project in sorted_projects %}
     <h2 class="post-title">
