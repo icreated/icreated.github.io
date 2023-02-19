@@ -1,11 +1,8 @@
 ---
 layout: default
 title: About contributors
+shortName: about
 ---
-
-# About #
-
-
 
 
 If you like this blog and you find the information useful, you can support it by donating via PayPal. Thank you!
