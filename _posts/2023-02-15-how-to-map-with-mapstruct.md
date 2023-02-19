@@ -80,9 +80,9 @@ If you want to map fields with different names you need to use **@Mapping** anno
  - `target` is a field in the target object. In our case it is `InvoiceDTO`. 
  - `source` is a field in the source object. In our case it is `MInvoice`.
 
-For example: `@Mapping(target = "id", source = "c_Invoice_ID")` means that `id` field in `InvoiceDTO` will be mapped from `c_Invoice_ID` field in `MInvoice`.
+>For example: `@Mapping(target = "id", source = "c_Invoice_ID")` means that `id` field in `InvoiceDTO` will be mapped from `c_Invoice_ID` field in `MInvoice`.
 
-`expression` is used to define a custom mapping. In our case we use it to get `bpartnerName` from `C_BPartner_ID` field. \ 
+`expression` is used to define a custom mapping. In our case we use it to get `bpartnerName` from `C_BPartner_ID` field. 
 Java code is used to define custom mapping. \
 Don't forget to add `MBPartner` class to the list of imports in @Mapper annotation.
 
@@ -103,5 +103,5 @@ Here `InvoiceDto` annotated with `@MappingTarget` is already populated with data
 
 Thanks to all these features we can easily map Idempiere models to DTOs. \
 
-**Advice**: Escaping custom mapping is possible if you give the same name to the field in the source and target objects. Think about it when working with OpenApi definitions.
+>**Advice**: Escaping custom mapping is possible if you give the same name to the field in the source and target objects. Think about it when working with OpenApi definitions.
     
