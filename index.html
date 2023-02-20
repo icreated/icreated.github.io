@@ -42,7 +42,7 @@ shortName: blog
   {% if paginator.total_pages > 1 %}
     <div class="pagination dark">
     {% if paginator.previous_page %}
-      <a class="page" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"><</a>
+      <a class="page" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&lt;</a>
     {% endif %}
 
     {% for page in (1..paginator.total_pages) %}
@@ -56,7 +56,7 @@ shortName: blog
     {% endfor %}
 
     {% if paginator.next_page %}
-      <a class="page" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">></a>
+      <a class="page" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">&gt;</a>
     {% endif %}
     </div>
   {% endif %}
