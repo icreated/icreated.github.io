@@ -69,4 +69,14 @@ Value of `@Import` annotation can be injected with helper method `changeAnnotati
   }
 {% endhighlight %}
 
+Not forget to add `@Import` annotation to the configuration class with empty value:
+{% highlight java %}
+    @Configuration
+    @Import({})
+    public class PortalConfig {
+    ...
+    }
+{% endhighlight %}
+
+## Conclusion
 Hope that this solution will help you to solve the same problem when integrating Spring Framework with OSGi environment!
