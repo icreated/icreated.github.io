@@ -23,13 +23,13 @@ tags:
 `@Mapper` annotation has a parameter: `uses = {PaymentService.class}`. It is used to define a service we need to use in the mapper.\
 `@Mapper` annotation has a parameter: `imports = {MBPartner.class}`. It is used to define a class that will be used in the expression.
 
-{% highlight java %}
+```java
 @Mapper(componentModel = "spring", uses = {PaymentService.class}, 
 imports = {MBPartner.class})
 public interface InvoiceMapper {
   ...
 }
-{% endhighlight %}
+```
 
 
 ## Basic mapping
@@ -37,7 +37,7 @@ Let's take a look at an exemplary mapping between `MInvoice` and `InvoiceDTO` ob
 MInvoice object is a model from Idempiere. It is a representation of `C_Invoice` table in the database.\
 InvoiceDTO is a data transfer object created by OpenApi. It is used to transfer data between backend and frontend.
     
-{% highlight java %}
+```java
 @Schema(name = "Invoice", description = "Object Invoice")
 @JsonTypeName("Invoice")
 @Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
@@ -57,11 +57,11 @@ public class InvoiceDto {
 
   ...
   }
-{% endhighlight %}
+```
     
 Mappings between these objects are defined in `co.icreated.portal.mapper.InvoiceMapper` class.
         
-{% highlight java nolinenumbers %}
+```java
     @Mapping(target = "id", source = "c_Invoice_ID")
     @Mapping(target = "bpartnerName",
         expression = "java(MBPartner.get(invoice.getCtx(), 
@@ -70,7 +70,7 @@ Mappings between these objects are defined in `co.icreated.portal.mapper.Invoice
     @Mapping(target = "poReference", source = "POReference")
     @Mapping(target = "currency", source = "currencyISO")
     public abstract InvoiceDto toDto(MInvoice invoice);
-{% endhighlight %}
+```
 
 
 MapStruct maps fields with the same name by default. So, you don't need to define mapping for fields with the same name. \
@@ -92,14 +92,14 @@ For exemple we need to do additional actions when mapping `MInvoice` to `Invoice
 It can be done with **@AfterMapping** annotation. This annotation means that the method will be called after the mapping is done.
 In the parameters of the method we can use the source and target objects. \
 Here `InvoiceDto` annotated with `@MappingTarget` is already populated with data from `MInvoice`. We can use it to get additional data.
-{% highlight java %}
+```java
     @AfterMapping
     protected void setBPartnerName(MInvoice invoice, @MappingTarget InvoiceDto invoiceDto) {
         invoiceDto.setBpartnerName(MBPartner.get(invoice.getCtx(), invoice.getC_BPartner_ID())
         .getName());
         invoiceDto.setPayments(paymentService.findInvoicePayments(invoice.getC_Invoice_ID()));
     }
-{% endhighlight %}
+```
 
 Thanks to all these features we can easily map Idempiere models to DTOs. \
 

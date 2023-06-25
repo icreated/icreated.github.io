@@ -23,7 +23,7 @@ OpenAPI specification is a file that describes your API. It is a contract betwee
 
 For example, let's create an OpenAPI specification for a simple API that returns credit card types.
 
-{% highlight yaml %}
+```java
   /common/reference/creditcardtypes:
     get:
       tags:
@@ -40,7 +40,7 @@ For example, let's create an OpenAPI specification for a simple API that returns
                 type: array
                 items:
                   $ref: '#/components/schemas/ValueLabel'
-{% endhighlight yaml %}
+```
 
 This specification describes an endpoint that returns credit card types. It returns an array of `ValueLabel` objects. `ValueLabel` object has two properties: `value` and `label`.
 
@@ -48,7 +48,7 @@ This specification describes an endpoint that returns credit card types. It retu
 ## Generate server stubs
 Server stubs are generated thanks to `pom.xml` file. You can find `pom.xml` file in the root of the project. It contains the following plugin:
 
-{% highlight xml %}
+```java
   <plugin>
     <groupId>org.openapitools</groupId>
     <artifactId>openapi-generator-maven-plugin</artifactId>
@@ -89,7 +89,7 @@ Server stubs are generated thanks to `pom.xml` file. You can find `pom.xml` file
 		    </execution>
 		  </executions>
   </plugin>
-{% endhighlight xml %}
+```
 
 This plugin generates server stubs. It generates interfaces for controllers and models DTO (Data Transfer Objects). You can find generated files in the `src/main/java/co/icreated/portal/api` folder.
 
@@ -99,7 +99,7 @@ That's it. You have created OpenAPI specification and generated server stubs. No
 ## Implement business logic
 You can implement business logic by implementing generated interfaces. For example, let's implement `getCreditCardTypes` method.
 
-{% highlight java %}
+```java
   @Override
   public ResponseEntity<List<ValueLabelDto>> getCreditCardTypes() {
     List<ValueLabelDto> creditCardTypes = new ArrayList<>();
@@ -108,5 +108,5 @@ You can implement business logic by implementing generated interfaces. For examp
     creditCardTypes.add(new ValueLabelDto("AMEX", "AMEX"));
     return ResponseEntity.ok(creditCardTypes);
   }
-{% endhighlight java %}
+```
 

@@ -17,7 +17,7 @@ Hibernate Validator is a validation framework that integrates with the Java Bean
 In OpenApi specifications you can define validation rules for each field. \
 For example, you can define that the field should be a number win min and max values or that it should be a string with a minimum length of 3 characters. \
 
-{% highlight yaml %}
+```yaml
     Document:
       type: object
       description: Object Document
@@ -32,11 +32,11 @@ For example, you can define that the field should be a number win min and max va
           type: string
           minLength: 3
           maxLength: 10
-{% endhighlight %}
+```
 
 When you generate the code from OpenApi specifications, you will get a DTO class with validation annotations.
     
-    {% highlight java %}
+```java
     @Schema(name = "Document", description = "Object Document")
     @JsonTypeName("Document")
     @Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
@@ -61,6 +61,6 @@ When you generate the code from OpenApi specifications, you will get a DTO class
     
       ...
       }
-    {% endhighlight %}
+```
 
 These annotations are validated by Hibernate Validator during the request processing.

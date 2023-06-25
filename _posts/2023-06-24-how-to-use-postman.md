@@ -26,6 +26,7 @@ Define first environment variables for your Postman collection. You can do it in
 
 ## Pre-request script
 Add the following script to the pre-request script section of your Postman collection:
+
 ```javascript
 pm.sendRequest(
     {

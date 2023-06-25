@@ -35,7 +35,7 @@ It's not a good solution, but it works. However, it is not a good practice to im
 
 - adding classgraph library to the project which is able to scan classes in OSGi environment. It can be found here: [https://github.com/classgraph/classgraph](https://github.com/classgraph/classgraph).
 -  we will not ovveride `doScan` method in `ClassPathBeanDefinitionScanner` class from Spring Framework. Instead, a more simpler solution is inject classes annotated with `@Component` annotation to `@Import` annotation:
-{% highlight java %}
+```java
     Import importAnnotation = PortalConfig.class.getAnnotation(Import.class);
     PortalUtils.changeAnnotationValue(importAnnotation, "value", getSpringComponents());
 
@@ -53,10 +53,10 @@ It's not a good solution, but it works. However, it is not a good practice to im
 	  }
 	  return list.toArray(new Class<?>[list.size()]);
   } 
-{% endhighlight %}
+```
 
 Value of `@Import` annotation can be injected with helper method `changeAnnotationValue`:
-{% highlight java %}
+```java
     public static void changeAnnotationValue(Annotation annotation, String attributeName, Object newValue) {
       try {
           Field f = annotation.getClass().getDeclaredField("memberValues");
@@ -67,16 +67,16 @@ Value of `@Import` annotation can be injected with helper method `changeAnnotati
           throw new RuntimeException(e);
       }
   }
-{% endhighlight %}
+```
 
 Not forget to add `@Import` annotation to the configuration class with empty value:
-{% highlight java %}
+```java
     @Configuration
     @Import({})
     public class PortalConfig {
     ...
     }
-{% endhighlight %}
+```
 
 ## Conclusion
 Hope that this solution will help you to solve the same problem when integrating Spring Framework with OSGi environment!
