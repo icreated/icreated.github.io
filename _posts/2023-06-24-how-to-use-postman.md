@@ -59,4 +59,4 @@ What does this script do?
 
 
 ## Conclusion
-Now you can test your API without manual copy/paste of the JWT token. Use parent collection for all requests. It will be executed automatically before each request.
+Now you can test your API without manual copy/paste of the JWT token. Use `Inherit auth from parent` for all requests. It will be executed automatically before each request.
