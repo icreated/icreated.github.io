@@ -48,7 +48,7 @@ Here is how we would like to see our code:
 ```
 
 ## Implementation
-Here is the implementation of `QueryUtil.nativeFirst` method:
+Here is the implementation of `QueryTool.nativeFirst` method:
 ```java
 	  public static <T> T nativeFirst(String sql, Map<Integer, Object> params,
 	      ThrowingFunction<ResultSet, T, Exception> function) {
@@ -105,4 +105,4 @@ We also need to define `ThrowingFunction` interface that will help us to avoid `
 ```
 
 ## Conclusion
-Java lambda helped us to hide JDBC implementation and make our code more readable. This lambda approach can be used for transactions too like here: [How to hide transaction implementation](/2023/06/24/how-to-hide-transaction-impl.html).
+Java lambda helped us to hide JDBC implementation and make our code more readable. This lambda approach can be used for transactions too like here: [How to hide transaction implementation](/java/lambda/transaction/idempiere/2023/06/24/how-to-hide-transaction-impl.html).

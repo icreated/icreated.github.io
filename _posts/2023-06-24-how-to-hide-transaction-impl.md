@@ -91,4 +91,4 @@ Here is the implementation of the `Transaction` class:
 Note that we use `Thread.currentThread().getStackTrace()[2].getMethodName()` to get the name of the method that calls `Transaction.run()`. It is a good practice to use the name of the method as a transaction name. It will help you to find the transaction in the log file.
 
 ## Conclusion
-This lambda approach can be used for JDBC implementation too like here: [How to hide JDBC implementation](/2023/06/24/how-to-hide-jdbc-impl.html)
+This lambda approach can be used for JDBC implementation too like here: [How to hide JDBC implementation](java/lambda/jdbc/idempiere/2023/06/24/how-to-hide-jdbc-impl.html)
