@@ -9,6 +9,7 @@ categories: automate connect jwt postman
 tags: 
 - webstore-api
 - webportal-api
+- openapi
 - postman
 ---
 
