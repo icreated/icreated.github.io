@@ -42,7 +42,7 @@ It is a good practice to hide JDBC implementation from the client code. It will 
 Here is how we would like to see our code:
 ```java
     String sql = "SELECT * FROM C_Order WHERE C_Order_ID = ?";
-    MOrder order = QueryUtil.nativeFirst(sql, Map.of(1, W_Store_ID), rs -> {
+    MOrder order = QueryTool.nativeFirst(sql, Map.of(1, W_Store_ID), rs -> {
       return new MOrder(ctx, rs, trxName);
     });
 ```
@@ -103,3 +103,6 @@ We also need to define `ThrowingFunction` interface that will help us to avoid `
       R apply(T t) throws E;
     }
 ```
+
+## Conclusion
+Java lambda helped us to hide JDBC implementation and make our code more readable. This lambda approach can be used for transactions too like here: [How to hide transaction implementation](/2023/06/24/how-to-hide-transaction-impl.html).
