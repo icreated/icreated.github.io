@@ -14,7 +14,7 @@ tags:
 
 
 ## TL;DR
-**Postman** is a great tool for testing REST API. It is very convenient to use it for testing WebPortal API. However, it is not very convenient to copy/paste JWT token every time you need to test a new request.
+**Postman** is a great tool for testing REST API. It is very convenient to use it for testing WebStore API. However, it is not very convenient to copy/paste JWT token every time you need to test a new request due to the token expiration, server restart, etc.
 This article describes how to automate this process.
 
 ## Environment variables
@@ -59,4 +59,4 @@ What does this script do?
 
 
 ## Conclusion
-Now you can test your API without manual copy/paste of the JWT token. Use `Inherit auth from parent` for all requests. It will be executed automatically before each request.
+Now you can test your API without manual copy/paste of the JWT token. Use `Inherit auth from parent` for all requests. It will be executed automatically before each request. Nice and easy!
