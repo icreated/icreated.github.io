@@ -10,7 +10,6 @@ tags:
 - webstore-api
 - webportal-api
 - openapi
-- postman
 ---
 
 
