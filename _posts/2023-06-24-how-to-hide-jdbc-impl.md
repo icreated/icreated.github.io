@@ -105,4 +105,4 @@ We also need to define `ThrowingFunction` interface that will help us to avoid `
 ```
 
 ## Conclusion
-Java lambda helped us to hide JDBC implementation and make our code more readable. This lambda approach can be used for transactions too like here: [How to hide transaction implementation](/2023-06-24-how-to-hide-transaction-impl.html).
+Java lambda helped us to hide JDBC implementation and make our code more readable. This lambda approach can be used for transactions too like here: [How to hide transaction implementation]({% post_url 2023-06-24-how-to-hide-transaction-impl %}).
