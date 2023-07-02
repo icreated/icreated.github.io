@@ -8,7 +8,7 @@ timezone: Europe/Paris
 
 paginate: 4
 paginate_path: "/blog/page:num/"
-plugins: [jekyll-paginate, jekyll-seo-tag, jekyll-sitemap]
+plugins: [jekyll-paginate, jekyll-seo-tag, jekyll-sitemap, jekyll-feed]
 
 jekyll_compose:
   post_default_front_matter:
@@ -23,6 +23,9 @@ jekyll_compose:
     tags:
 
 collections:
+  skills:
+    output: true
+    permalink: /skills/:path/
   projects:
     output: true
     permalink: /projects/:path/
@@ -33,3 +36,6 @@ social:
   stackoverflow: spok
   credly: sergey-polyarus
 
+feed:
+  posts_limit: 5
+  excerpt_only: true
