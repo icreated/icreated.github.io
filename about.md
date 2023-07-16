@@ -7,13 +7,12 @@ shortName: about
 <h1 class="subject">{{ page.title }}</h1>
 
 
-|  Name | Sergey Polyarus  | 
+|  Name | Sergey Polyarus  | [https://icreated.fr](https://icreated.fr) in French |
 |---|---|
 | Current work | Very cool company [Cosmotech](https://cosmotech.com/) in Lyon |
 | Programming languages  | Java, Kotlin, JS, TS, Python
 | Frameworks | Springboot, Angular, Kubernetes |
-| Languages |French, Russian, English|
-| Interests | Software development, Cats, Classical / Jazz music, Guitar / Piano playing
+
 
 
 ---
