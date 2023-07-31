@@ -20,6 +20,10 @@ This application works in pair with the server side plugin for Idempiere [Web Po
 - Customizable fonts (Open Dyslexic included)
 - i18n support
 
+## Demo
+The demo is available here: [https://webportal.icreated.co](https://webportal.icreated.co)
+The backend of this demo is based on Json Server. It is a fake REST API. It allows to test the application without installing a backend server. You can check the behaviour here: [https://github.com/icreated/portal-json-server](https://github.com/icreated/portal-json-server)
+
 ## Some snapshots:
 
 ### Home page

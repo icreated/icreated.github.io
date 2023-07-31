@@ -23,10 +23,10 @@ This applications shows standard web sites features:
 * password update
 * account information update
 
->**Attention** This application needs some more development that will be done in the future.
-- OpenAPI first approach
-- Generated models and services
-- QA review 
+## Demo
+The demo is available here: [https://webstore.icreated.co](https://webstore.icreated.fr)
+The backend of this demo is based on Json Server. It is a fake REST API. It allows to test the application without installing a backend server.
+If you find some troubles (mmm, actually I cannot save new backend data), you can check the behavior here: [https://github.com/icreated/webstore-json-server/blob/main/server.js](https://github.com/icreated/webstore-json-server/blob/main/server.js)
 
 
 ## Features
