@@ -2,31 +2,22 @@ on:
   push:
   pull_request:
     types: [opened, synchronize]
+
 jobs:
   build:
     runs-on: ubuntu-latest
-    name: script/cibuild
     steps:
-      - uses: actions/checkout@v2
-      - uses: ruby/setup-ruby@v1
+      - uses: actions/checkout@v4
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.1.0
+          ruby-version: '3.2'
           bundler-cache: true
       - name: Install Dart Sass
         run: |
-          sudo apt-get install -y curl wget
-          wget -qO- https://github.com/sass/dart-sass/releases/download/1.64.2/dart-sass-1.64.2-linux-x64.tar.gz | sudo tar -xz -C /usr/local --strip-components=1
-          sudo ln -s /usr/local/dart-sass/sass /usr/local/bin/sass
-          sass --version  # Verify installation
-          
-      - name: Install sass-embedded
-        run: gem install sass-embedded -v 1.86.0
-        
-      - name: Install dependencies
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y build-essential libsass-dev
-          gem install bundler
-          bundle install
+          npm install -g sass
+          npm install -g @sass/embedded
+      - name: Install Dependencies
+        run: bundle install
       - name: test
         run: script/cibuild
