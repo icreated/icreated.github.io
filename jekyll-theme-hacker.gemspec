@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
     f.match(%r{^((_includes|_layouts|_sass|assets)/|(LICENSE|README)((\.(txt|md|markdown)|$)))}i)
   end
 
-  s.required_ruby_version = ">= 3.1.0"
+  s.required_ruby_version = ">= 2.7.8"
 
   s.platform = Gem::Platform::RUBY
   s.add_runtime_dependency "jekyll", ">= 4.2.0", "< 5.0"
