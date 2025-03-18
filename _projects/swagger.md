@@ -17,7 +17,7 @@ This OpenApi application was created to work together with Idempiere WebStore / 
 
 It should point to following **openapi.xml** for WebStore:
 
-[http://localhost:8080/services/api-docs/openapi.xml](http://localhost:8080/services/api-docs/openapi.xml)
+[http://localhost:8080/services/openapi.yaml](http://localhost:8080/services/openapi.yaml)
 
 or 
 
