@@ -37,7 +37,7 @@ git clone https://github.com/icreated/webstore-api.git
 If used with others API plugins, modify path in pom.xml:
 
 ```xml
-<openapi-value>http://localhost:8080/services/api-docs/openapi.xml</openapi-value>
+<openapi-value>http://localhost:8080/services/openapi.yaml</openapi-value>
 ```
 
 Build it with Maven:
